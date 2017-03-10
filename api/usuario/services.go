@@ -16,7 +16,7 @@ func (s *Services) List(c echo.Context) error {
 	return c.JSONPretty(http.StatusOK, r, "   ")
 }
 
-// Get -> retorna usuário pelo id
+// Get -> retorna um usuário pelo id
 func (s *Services) Get(c echo.Context) error {
 	user := c.Get("user").(*jwt.Token)
 	claims := user.Claims.(jwt.MapClaims)
